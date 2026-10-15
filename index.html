@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Blog Pessoal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Meu Blog Pessoal</h1>
+    <p>Um espaço para compartilhar ideias, textos e imagens.</p>
+  </header>
+
+  <main class="conteudo">
+    <section class="formulario-publicacao" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Nova publicação</h2>
+      <form id="formulario-post">
+        <label for="titulo-post">Título</label>
+        <input id="titulo-post" name="titulo" type="text" required maxlength="80"
+          placeholder="Escreva o título da publicação">
+
+        <label for="texto-post">Texto</label>
+        <textarea id="texto-post" name="texto" rows="5" required
+          placeholder="O que você gostaria de compartilhar?"></textarea>
+
+        <label for="imagem-post">Endereço da imagem (opcional)</label>
+        <input id="imagem-post" name="imagem" type="url"
+          placeholder="https://exemplo.com/minha-foto.jpg">
+
+        <label for="arquivo-imagem">Ou escolha uma foto do seu dispositivo</label>
+        <input id="arquivo-imagem" name="arquivoImagem" type="file" accept="image/*">
+        <small>Escolha uma imagem de até 2 MB. No celular, você poderá escolher uma foto da galeria.</small>
+
+        <button type="submit">Publicar</button>
+      </form>
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="publicacoes" aria-labelledby="titulo-publicacoes">
+      <h2 id="titulo-publicacoes">Publicações</h2>
+      <div id="lista-publicacoes">
+        <p id="aviso-vazio" class="aviso-vazio">Ainda não há publicações. Seja o primeiro a escrever!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito com HTML, CSS e JavaScript.</p>
+  </footer>
+</body>
+</html>
